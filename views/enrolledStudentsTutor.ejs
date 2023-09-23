@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Themezhub" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LearnConnect Tutor Dashboard</title>
+		 
+        <!-- Custom CSS -->
+        <link href="assets/css/styles.css" rel="stylesheet">
+		
+    </head>
+	
+    <body>
+  <%- include('dashnavbar') %>
+			<!-- End Navigation -->
+			<div class="clearfix"></div>
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			
+			<!-- ======================= dashboard Detail ======================== -->
+			<div class="dashboard-wrap bg-light">
+							<a class="mobNavigation" data-toggle="collapse" href="#MobNav" role="button" aria-expanded="false" aria-controls="MobNav">
+				<i class="fas fa-bars mr-2"></i>Dashboard Navigation
+			</a>
+				 <div class="collapse" id="MobNav">
+					<div class="dashboard-nav">
+						<div class="dashboard-inner">
+							<ul data-submenu-title="Main Navigation">
+								<li><a href="/dashboard-tutor"><i class="lni lni-dashboard mr-2"></i>Dashboard</a></li>
+								<li><a href="/manage-course"><i class="lni lni-files mr-2"></i>Manage Courses</a></li>
+								<li><a href="/create-course"><i class="lni lni-add-files mr-2"></i>Create Courses</a></li>
+								<li class="active"><a href="/enrolled-students"><i class="lni lni-briefcase mr-2"></i>Enrolled Students</a></li>
+							</ul>
+							<ul data-submenu-title="My Accounts">
+								<li><a href="/tutorProfile"><i class="lni lni-user mr-2"></i>My Profile </a></li>
+								<li><a href="/logout"><i class="lni lni-power-switch mr-2"></i>Log Out</a></li>
+							</ul>
+						</div>					
+					</div>
+				</div>
+				
+				
+				<div class="dashboard-content">
+					<div class="dashboard-tlbar d-block mb-5">
+						<div class="row">
+							<div class="colxl-12 col-lg-12 col-md-12">
+								<h1 class="ft-medium">Enrolled Students</h1>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item text-muted"><a href="#">Home</a></li>
+										<li class="breadcrumb-item text-muted"><a href="#">Dashboard</a></li>
+										<li class="breadcrumb-item"><a href="#" class="theme-cl">Enrolled Students</a></li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+					
+					<div class="dashboard-widg-bar d-block">
+						<div class="row">
+							<div class="col-xl-12 col-md-12 col-sm-12">
+								
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12">
+								<div class="mb-4 tbl-lg rounded overflow-hidden">
+									<div class="table-responsive bg-white">
+										<table class="table">
+											<thead class="thead-dark">
+												<tr>
+												  <th scope="col">Enrolled List</th>
+												
+												  <th scope="col">Time</th>
+											
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<div class="cats-box rounded bg-white d-flex align-items-center">
+															
+															<div class="cats-box-caption px-2">
+																<h4 class="fs-md mb-0 ft-medium">Jatin Kanyal</h4>
+																<div class="d-block mb-2 position-relative">
+																	<span class="text-muted medium"><i class="lni lni-map-school-bench mr-1"></i>Core Java</span>
+																	<span class="muted medium ml-2 theme-cl">
+																</div>
+															</div>
+														</div>
+													</td>
+													<td><span class="text-info">Active</span></td>
+													
+												</tr>
+												<tr>
+													<td>
+														<div class="cats-box rounded bg-white d-flex align-items-center">
+															
+															<div class="cats-box-caption px-2">
+																<h4 class="fs-md mb-0 ft-medium">Dwij Patel</h4>
+																<div class="d-block mb-2 position-relative">
+																	<span class="text-muted medium">Full End Developer</span>
+																	
+																</div>
+															</div>
+														</div>
+													</td>
+													<td><span class="text-info">Active</span></td>
+													
+												</tr>
+												<tr>
+													<td>
+														<div class="cats-box rounded bg-white d-flex align-items-center">
+															
+															<div class="cats-box-caption px-2">
+																<h4 class="fs-md mb-0 ft-medium">Jainam Sutaria</h4>
+																<div class="d-block mb-2 position-relative">
+																	<span class="text-muted medium">Front End Developer</span>
+																	
+																</div>
+																</div>
+															</div>
+														</div>
+													</td>
+													<td><span class="text-info">Active</span></td>
+													
+												</tr>
+												<tr>
+													<td>
+														<div class="cats-box rounded bg-white d-flex align-items-center">
+															
+															<div class="cats-box-caption px-2">
+																<h4 class="fs-md mb-0 ft-medium">Omdevsinh Jadeja</h4>
+																<div class="d-block mb-2 position-relative">
+																	<span class="text-muted medium">Front End Developer</span>
+																	
+																</div>
+															</div>
+														</div>
+													</td>
+													<td><span class="text-info">Active</span></td>
+													
+												</tr>
+												<tr>
+													<td>
+														<div class="cats-box rounded bg-white d-flex align-items-center">
+															
+															<div class="cats-box-caption px-2">
+																<h4 class="fs-md mb-0 ft-medium">Heet Shah</h4>
+																<div class="d-block mb-2 position-relative">
+																	OOPs in Java</span>
+																	
+																</div>
+															</div>
+														</div>
+													</td>
+													<td><span class="text-info">Active</span></td>
+													
+												</tr>
+												<tr>
+													<td>
+														<div class="cats-box rounded bg-white d-flex align-items-center">
+															
+															<div class="cats-box-caption px-2">
+																<h4 class="fs-md mb-0 ft-medium">Rohan Parmar</h4>
+																<div class="d-block mb-2 position-relative">
+																	<span class="text-muted medium">Front End Developer</span>
+																	
+																</div>
+															</div>
+														</div>
+													</td>
+													<td><span class="text-info">Active</span></td>
+													
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12">
+								<ul class="pagination">
+									<li class="page-item">
+									  <a class="page-link" href="#" aria-label="Previous">
+										<span class="fas fa-arrow-circle-right"></span>
+										<span class="sr-only">Previous</span>
+									  </a>
+									</li>
+									<li class="page-item"><a class="page-link" href="#">1</a></li>
+									<li class="page-item"><a class="page-link" href="#">2</a></li>
+									<li class="page-item active"><a class="page-link" href="#">3</a></li>
+									<li class="page-item"><a class="page-link" href="#">...</a></li>
+									<li class="page-item"><a class="page-link" href="#">18</a></li>
+									<li class="page-item">
+									  <a class="page-link" href="#" aria-label="Next">
+										<span class="fas fa-arrow-circle-right"></span>
+										<span class="sr-only">Next</span>
+									  </a>
+									</li>
+								</ul>
+							</div>
+						</div>
+							
+					</div>
+					
+					<!-- footer -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="py-3">© 2022 Workplex. Designd By ThemezHub.</div>
+						</div>
+					</div>
+		
+				</div>
+				
+			</div>
+			<%- include('footer') %>
+			<!-- ======================= dashboard Detail End ======================== -->
+			
+			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+			
+
+		</div>
+		<!-- ============================================================== -->
+		<!-- End Wrapper -->
+		<!-- ============================================================== -->
+
+		<!-- ============================================================== -->
+		<!-- All Jquery -->
+		<!-- ============================================================== -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/slick.js"></script>
+		<script src="assets/js/slider-bg.js"></script>
+		<script src="assets/js/smoothproducts.js"></script>
+		<script src="assets/js/snackbar.min.js"></script>
+		<script src="assets/js/jQuery.style.switcher.js"></script>
+		<script src="assets/js/custom.js"></script>
+		<!-- ============================================================== -->
+		<!-- This page plugins -->
+		<!-- ============================================================== -->		
+
+	</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Themezhub" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <title>LearnConnect</title>
+		 
+        <!-- Custom CSS -->
+        <link href="assets/css/styles.css" rel="stylesheet">
+		
+    </head>
+	
+    <body>
+  <%- include('dashnavbar') %>
+
+			<div class="clearfix"></div>
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			
+			<!-- ======================= dashboard Detail ======================== -->
+			
+			<div class="dashboard-wrap bg-light">
+			<a class="mobNavigation" data-toggle="collapse" href="#MobNav" role="button" aria-expanded="false" aria-controls="MobNav">
+				<i class="fas fa-bars mr-2"></i>Dashboard Navigation
+			</a>
+				 <div class="collapse" id="MobNav">
+					<div class="dashboard-nav">
+						<div class="dashboard-inner">
+							<ul data-submenu-title="Main Navigation">
+								<li class="active"><a href="/dashboard-tutor"><i class="lni lni-dashboard mr-2"></i>Dashboard</a></li>
+								<li><a href="/manage-course"><i class="lni lni-files mr-2"></i>Manage Courses</a></li>
+								<li><a href="/create-course"><i class="lni lni-add-files mr-2"></i>Create Courses</a></li>
+								<li><a href="/enrolled-students"><i class="lni lni-briefcase mr-2"></i>Enrolled Students</a></li>
+							</ul>
+							<ul data-submenu-title="My Accounts">
+								<li><a href="/tutorProfile"><i class="lni lni-user mr-2"></i>My Profile </a></li>
+								<li><a href="/logout"><i class="lni lni-power-switch mr-2"></i>Log Out</a></li>
+							</ul>
+						</div>					
+					</div>
+				</div>
+				
+				<div class="dashboard-content">
+					<div class="dashboard-tlbar d-block mb-5">
+						<div class="row">
+							<div class="colxl-12 col-lg-12 col-md-12">
+								<h1 class="ft-medium">Hello, <%= user ? user.username : "Guest" %></h1>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item text-muted"><a href="#">Home</a></li>
+										<li class="breadcrumb-item"><a href="#" class="theme-cl">Dashboard</a></li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+					
+					<div class="dashboard-widg-bar d-block">
+						<div class="row">
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+								<div class="dash-widgets py-5 px-4 bg-info rounded">
+									<h2 class="ft-medium mb-1 fs-xl text-light">46</h2>
+									<p class="p-0 m-0 text-light fs-md">Active students</p>
+									<i class="lni lni-empty-file"></i>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+								<div class="dash-widgets py-5 px-4 bg-dark rounded">
+									<h2 class="ft-medium mb-1 fs-xl text-light">87</h2>
+									<p class="p-0 m-0 text-light fs-md">Notifications</p>
+									<i class="lni lni-users"></i>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+								<div class="dash-widgets py-5 px-4 bg-warning rounded">
+									<h2 class="ft-medium mb-1 fs-xl text-light">12</h2>
+									<p class="p-0 m-0 text-light fs-md">Courses</p>
+									<i class="lni lni-bar-chart"></i>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+								<div class="dash-widgets py-5 px-4 bg-purple rounded">
+									<h2 class="ft-medium mb-1 fs-xl text-light">32</h2>
+									<p class="p-0 m-0 text-light fs-md">Loved your courses</p>
+									<i class="lni lni-heart"></i>
+								</div>
+							</div>
+						</div>
+						
+						<!-- <div class="row">
+							<div class="col-lg-12 col-md-12">
+								<div class="dashboard-gravity-list with-icons">
+									<h4 class="mb-0 ft-medium">Recent Activities</h4>
+									<ul>
+										<li>
+											<i class="dash-icon-box ti-layers text-purple bg-light-purple"></i> Your courses for <strong class="ft-medium text-dark"><a href="#">Java Devloping</a></strong> is on going
+											<a href="#" class="close-list-item"><i class="fas fa-times"></i></a>
+										</li>
+
+										<li>
+											<i class="dash-icon-box ti-star text-success bg-light-success"></i> Jodie Farrell left a review <div class="numerical-rating high" data-rating="5.0"></div> for<strong class="ft-medium text-dark"><a href="#"> OOPS in Java</a></strong>
+											<a href="#" class="close-list-item"><i class="fas fa-times"></i></a>
+										</li>
+
+										<li>
+											<i class="dash-icon-box ti-heart text-warning bg-light-warning"></i> Someone bookmarked your <strong class="ft-medium text-dark"><a href="#">Java fundamentals</a></strong> listing!
+											<a href="#" class="close-list-item"><i class="fas fa-times"></i></a>
+										</li>
+
+										<li>
+											<i class="dash-icon-box ti-star text-info bg-light-info"></i> Gracie Mahmood left a review <div class="numerical-rating mid" data-rating="3.8"></div> on <strong class="ft-medium text-dark"><a href="#">Core Java</a></strong>
+											<a href="#" class="close-list-item"><i class="fas fa-times"></i></a>
+										</li>
+
+
+										<li>
+											<i class="dash-icon-box ti-star text-success bg-light-success"></i> Ethan Barrett left a review <div class="numerical-rating high" data-rating="4.7"></div> on <strong class="ft-medium text-dark"><a href="#">IBM frontend development</a></strong>
+											<a href="#" class="close-list-item"><i class="fas fa-times"></i></a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+							
+						</div>	 -->
+							
+					</div>
+					
+				</div>
+				
+			</div>
+			<%- include('footer') %>
+			<!-- ======================= dashboard Detail End ======================== -->
+			
+			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+			
+
+		</div>
+		<!-- ============================================================== -->
+		<!-- End Wrapper -->
+		<!-- ============================================================== -->
+
+		<!-- ============================================================== -->
+		<!-- All Jquery -->
+		<!-- ============================================================== -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/slick.js"></script>
+		<script src="assets/js/slider-bg.js"></script>
+		<script src="assets/js/smoothproducts.js"></script>
+		<script src="assets/js/snackbar.min.js"></script>
+		<script src="assets/js/jQuery.style.switcher.js"></script>
+		<script src="assets/js/custom.js"></script>
+		<!-- ============================================================== -->
+		<!-- This page plugins -->
+		<!-- ============================================================== -->	
+
+	</body>
+</html>

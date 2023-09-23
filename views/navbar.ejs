@@ -1,0 +1,77 @@
+<div class="preloader"></div>
+
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+      <!-- ============================================================== -->
+      <!-- Top header  -->
+      <!-- ============================================================== -->
+      <!-- Start Navigation -->
+      <div class="header header-transparent dark-text">
+        <div class="container">
+          <nav id="navigation" class="navigation navigation-landscape">
+            <div class="nav-header">
+              <a class="nav-brand" href="/">
+                <img src="assets/img/logo.png" class="logo" alt="" />
+              </a>
+              <div class="nav-toggle"></div>
+              <div class="mobile_nav">
+                <ul>
+                  <li>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#login"
+                      class="theme-cl fs-lg"
+                    >
+                      <i class="lni lni-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="nav-menus-wrapper" style="transition-property: none">
+              <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+
+                <li><a href="/tutors">Find Tutors</a></li>
+
+                <li><a href="/courses">Courses</a></li>
+                <!-- Display role-based dashboard links -->
+                <% if (user && user.role === '1') { %>
+                <li><a href="/dashboard-tutor">Dashboard</a></li>
+                <% } else if (user && user.role === '0') { %>
+                <li><a href="/dashboard-student">Dashboard</a></li>
+                <% } %>
+                <li><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/about-us">About Us</a></li>
+              </ul>
+
+              <ul class="nav-menu nav-menu-social align-to-right">
+                <li>
+                  <% if (typeof user === 'undefined') { %>
+                  <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#login"
+                    class="ft-medium"
+                  >
+                    <i class="lni lni-user mr-2"></i>Sign In
+                  </a>
+                <% } else { %>
+                  <a
+                    href="/logout"
+                    class="ft-medium"
+                  >
+                <i class="lni lni-power-switch mr-2"></i><%= "Logout" %>
+                  </a>
+                <% } %>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- End Navigation -->
+    

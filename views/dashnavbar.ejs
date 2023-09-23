@@ -1,0 +1,66 @@
+      <div class="preloader"></div>
+		
+        <!-- ============================================================== -->
+        <!-- Main wrapper - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <div id="main-wrapper">
+		
+            <!-- ============================================================== -->
+            <!-- Top header  -->
+            <!-- ============================================================== -->
+            <!-- Start Navigation -->
+			<div class="header header-light dark-text head-shadow">
+				<div class="container">
+					<nav id="navigation" class="navigation navigation-landscape">
+						<div class="nav-header">
+							<a class="nav-brand" href="/">
+								<img src="assets/img/logo.png" class="logo" alt="" />
+							</a>
+							<div class="nav-toggle"></div>
+							<div class="mobile_nav">
+								<ul>
+								<li>
+									<a href="javascript:void(0);" data-toggle="modal" data-target="#login" class="crs_yuo12 w-auto text-dark gray">
+										<span class="embos_45"><i class="lni lni-power-switch mr-1 mr-1"></i>Logout</span>
+									</a>
+								</li>
+								</ul>
+							</div>
+						</div>
+						<div class="nav-menus-wrapper" style="transition-property: none;">
+							<ul class="nav-menu">
+							
+								<li><a href="/">Home</a>
+								</li>
+								
+								<li><a href="/tutors">Find Tutor</a>
+									
+								</li>
+								
+								<li><a href="/courses">Courses</a>
+									
+								</li>
+								<!-- Display role-based dashboard links -->
+                                <% if (user && user.role === '1') { %>
+                                <li><a href="/dashboard-tutor">Dashboard</a></li>
+                                <% } else if (user && user.role === '0') { %>
+                                <li><a href="/dashboard-student">Dashboard</a></li>
+                                <% } %>
+								<li><a href="/contact-us">Contact Us</a></li>
+								<li><a href="/about-us">Contact Us</a></li>
+									
+								</li>
+								
+							</ul>
+							
+							<ul class="nav-menu nav-menu-social align-to-right">
+								<li class="add-listing gray">
+									<a href="/logout" >
+										<i class="lni lni-power-switch mr-1"></i> Logout
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>

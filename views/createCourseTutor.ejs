@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Themezhub" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LearnConnect Create Course</title>
+		 
+        <!-- Custom CSS -->
+        <link href="assets/css/styles.css" rel="stylesheet">
+		
+    </head>
+	
+    <body>
+	  <%- include('dashnavbar') %>
+			<!-- End Navigation -->
+			<div class="clearfix"></div>
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			
+			<!-- ======================= dashboard Detail ======================== -->
+			<div class="dashboard-wrap bg-light">
+							<a class="mobNavigation" data-toggle="collapse" href="#MobNav" role="button" aria-expanded="false" aria-controls="MobNav">
+				<i class="fas fa-bars mr-2"></i>Dashboard Navigation
+			</a>
+				 <div class="collapse" id="MobNav">
+					<div class="dashboard-nav">
+						<div class="dashboard-inner">
+							<ul data-submenu-title="Main Navigation">
+								<li><a href="/dashboard-tutor"><i class="lni lni-dashboard mr-2"></i>Dashboard</a></li>
+								<li><a href="/manage-course"><i class="lni lni-files mr-2"></i>Manage Courses</a></li>
+								<li class="active"><a href="/create-course"><i class="lni lni-add-files mr-2"></i>Create Courses</a></li>
+								<li><a href="/enrolled-students"><i class="lni lni-briefcase mr-2"></i>Enrolled Students</a></li>
+							</ul>
+							<ul data-submenu-title="My Accounts">
+								<li><a href="/tutor-profile"><i class="lni lni-user mr-2"></i>My Profile </a></li>
+								<li><a href="/logout"><i class="lni lni-power-switch mr-2"></i>Log Out</a></li>
+							</ul>
+						</div>					
+					</div>
+				</div>
+				
+				<div class="dashboard-content">
+					<div class="dashboard-tlbar d-block mb-5">
+						<div class="row">
+							<div class="colxl-12 col-lg-12 col-md-12">
+								<h1 class="ft-medium">Add Courses</h1>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item text-muted"><a href="#">Home</a></li>
+										<li class="breadcrumb-item text-muted"><a href="#">Dashboard</a></li>
+										<li class="breadcrumb-item"><a href="#" class="theme-cl">Add Courses</a></li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+					
+					<div class="dashboard-widg-bar d-block">
+						<div class="row">
+							<div class="col-xl-12 col-lg-12 col-md-12">
+								<div class="_dashboard_content bg-white rounded mb-4">
+									<div class="_dashboard_content_header br-bottom py-3 px-3">
+										<div class="_dashboard__header_flex">
+											<h4 class="mb-0 ft-medium fs-md"><i class="fa fa-file mr-1 theme-cl fs-sm"></i>Create Courses</h4>	
+										</div>
+									</div>
+									
+									<div class="_dashboard_content_body py-3 px-3">
+										<form action="/processCreateCourse" method="post" class="row">
+											
+											
+											<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+												<div class="row">
+													<div class="col-xl-6 col-lg-6">
+														<div class="form-group">
+															<label class="text-dark ft-medium">Course Name</label>
+															<input required type="text" class="form-control rounded" name="course" placeholder="Course Name">
+														</div>
+													</div>
+												<div class="form-group">
+													<label class="text-dark ft-medium">Category</label>
+													<select id="category" class="form-control" name="category">
+														<option selected disabled>Choose A Category...</option>
+														<option disabled class="text-primary">Web Development</option>
+														<option value="Angular">Angular</option>
+														<option value="ASP .NET">ASP .NET</option>
+														<option value="Django">Django</option>
+														<option value="Express">Express</option>
+														<option value="Laravel">Laravel</option>
+														<option value="Java">Java</option>
+														<option disabled class="text-primary">Mobile App Development</option>
+														<option value="Android">Android</option>
+														<option value="IOS">IOS</option>
+														<option value="Kotlin">Kotlin</option>
+														<option disabled class="text-primary">Programming Language</option>
+														<option value="C++">C++</option>
+														<option value="C#">C#</option>
+														<option value="C Language">C Language</option>
+														<option value="Java">Java</option>
+														<option value="Javascript">Javascript</option>
+														<option value="Python">Python</option>
+														<option value="Ruby">Ruby</option>
+													</select>
+												</div>
+													<div class="col-xl-6 col-lg-6">
+														<div class="form-check col-lg-3">
+														<label class="text-dark ft-medium">Difficulty: </label>
+														<input required class="form-check-input required" type="radio" name="difficulty" id="Hard" value="Hard">
+															<label class="form-check-label" for="Hard">
+																Hard
+															</label>
+														<input required class="form-check-input required" type="radio" name="difficulty" id="Intermediate" value="Intermediate">
+															<label class="form-check-label" for="Intermediate">
+																Intermediate
+															</label>
+														<input required class="form-check-input required" type="radio" name="difficulty" id="Easy" value="Easy">
+															<label class="form-check-label" for="Easy">
+																Easy
+															</label>
+														</div>
+														<p class="text-dark ft-medium">Time Slots:</p>
+														<div class="row">
+															<div class="col-md-6">
+																<label class="PillList-item">
+																	<input required type="checkbox" name="slots" value="9:00 AM - 10:00 AM">
+																	<span class="PillList-label">9:00 AM - 10:00 AM
+																		<span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+																	</span>
+																</label>
+																<label class="PillList-item">
+																	<input required type="checkbox" name="slots" value="10:00 AM - 11:00 AM">
+																	<span class="PillList-label">10:00 AM - 11:00 AM
+																		<span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+																	</span>
+																</label>
+																<label class="PillList-item">
+																	<input required type="checkbox" name="slots" value="11:00 AM - 12:00 PM">
+																	<span class="PillList-label">11:00 AM - 12:00 PM
+																		<span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+																	</span>
+																</label>
+																<label class="PillList-item">
+																	<input required type="checkbox" name="slots" value="12:00 PM - 1:00 PM">
+																	<span class="PillList-label">12:00 PM - 1:00 PM
+																		<span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+																	</span>
+																</label>
+																<label class="PillList-item">
+																	<input required type="checkbox" name="slots" value="1:00 PM - 2:00 PM">
+																	<span class="PillList-label">1:00 PM - 2:00 PM
+																		<span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+																	</span>
+																</label>
+																</div>
+															<div class="col-md-6">
+																<label class="PillList-item">
+																	<input required type="checkbox" name="slots" value="2:00 PM - 3:00 PM">
+																	<span class="PillList-label">2:00 PM - 3:00 PM
+																		<span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+																	</span>
+																</label>
+																<label class="PillList-item">
+																	<input required type="checkbox" name="slots" value="3:00 PM - 4:00 PM">
+																	<span class="PillList-label">3:00 PM - 4:00 PM
+																		<span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+																	</span>
+																</label>
+																<label class="PillList-item">
+																	<input required type="checkbox" name="slots" value="4:00 PM - 5:00 PM">
+																	<span class="PillList-label">4:00 PM - 5:00 PM
+																		<span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+																	</span>
+																</label>
+																<label class="PillList-item">
+																	<input required type="checkbox" name="slots" value="5:00 PM - 6:00 PM">
+																	<span class="PillList-label">5:00 PM - 6:00 PM
+																		<span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+																	</span>
+																</label>
+																<label class="PillList-item">
+																	<input required type="checkbox" name="slots" value="6:00 PM - 7:00 PM">
+																	<span class="PillList-label">6:00 PM - 7:00 PM
+																		<span class="Icon Icon--checkLight Icon--smallest"><i class="fa fa-check"></i></span>
+																	</span>
+																</label>
+															</div>
+														</div>
+														
+														  <style>
+															.PillList-item {
+																cursor: pointer;
+																display: inline-block;
+																float: left;
+																font-size: 14px;
+																font-weight: normal;
+																line-height: 20px;
+																margin: 0 12px 12px 0;
+																text-transform: capitalize;
+																}
+
+																.PillList-item input[type="checkbox"] {
+																display: none;
+																}
+																.PillList-item input[type="checkbox"]:checked + .PillList-label {
+																background-color: #28b661 ;
+																border: 1px solid #28b661 ;
+																color: #fff;
+																padding-right: 16px;
+																padding-left: 16px;
+																}
+																.PillList-label {
+																border: 1px solid #28b661 ;
+																border-radius: 20px;
+																color: #28b661 ;
+																display: block;
+																padding: 7px 28px;
+																text-decoration: none;
+																}
+																.PillList-item
+																input[type="checkbox"]:checked
+																+ .PillList-label
+																.Icon--checkLight {
+																display: inline-block;
+																}
+																.PillList-item input[type="checkbox"]:checked + .PillList-label .Icon--addLight,
+																.PillList-label .Icon--checkLight,
+																.PillList-children {
+																display: none;
+																}
+																.PillList-label .Icon {
+																width: 12px;
+																height: 12px;
+																margin: 0 0 0 12px;
+																}
+																.Icon--smallest {
+																font-size: 12px;
+																line-height: 12px;
+																}
+																.Icon {
+																background: transparent;
+																display: inline-block;
+																font-style: normal;
+																vertical-align: baseline;
+																position: relative;
+																}
+
+														  </style>
+													<div class="col-xl-6 col-lg-6">
+														<div class="form-group">
+															<label class="text-dark ft-medium">Price: </label>
+															<input required type="number" name="price" class="form-control rounded" placeholder="150">
+														</div>
+													</div>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							
+							<div class="row">
+								<div class="col-lg-12 col-md-12">
+									<button type="submit" class="btn btn-md ft-medium text-light rounded theme-bg">Create Course</button>
+								</div>	
+							</div>
+						</form>
+	
+					</div>
+					
+				</div>
+				
+			</div>
+			<%- include('footer') %>
+			<!-- ======================= dashboard Detail End ======================== -->
+			
+			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+			
+
+		</div>
+		<!-- ============================================================== -->
+		<!-- End Wrapper -->
+		<!-- ============================================================== -->
+
+		<!-- ============================================================== -->
+		<!-- All Jquery -->
+		<!-- ============================================================== -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/slick.js"></script>
+		<script src="assets/js/slider-bg.js"></script>
+		<script src="assets/js/smoothproducts.js"></script>
+		<script src="assets/js/snackbar.min.js"></script>
+		<script src="assets/js/jQuery.style.switcher.js"></script>
+		<script src="assets/js/custom.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+		<script>
+		$(document).ready(function () {
+  		var urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get("success")=='true') {
+          swal({
+            title: "Successful",
+            text: `${urlParams.get("message")}`,
+            icon: "success",
+            button: "Continue",
+          }).then(() => {
+            console.log(window.location.hostname);
+            window.location.replace(window.location.origin + "/create-course");
+          });
+        }
+        else if (urlParams.get("success") == 'false') {
+          swal({
+            title: "Failed",
+            text: `${urlParams.get("message")}`,
+            icon: "error",
+            button: "Do it Again!",
+          }).then(() => {
+            console.log(window.location.hostname);
+            window.location.replace(window.location.origin + "/create-course");
+          });
+        }})
+		</script>
+		<!-- ============================================================== -->
+		<!-- This page plugins -->
+		<!-- ============================================================== -->		
+
+	</body>
+</html>
